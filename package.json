@@ -3,7 +3,7 @@
   "version": "1.2.0",
   "scripts": {
     "start": "./node_modules/.bin/parcel index.html",
-    "clean": "rm -f dist/*.{svg,html,js,map}",
+    "clean": "rm -f dist/*.{svg,png,html,js,map}",
     "build": "./node_modules/.bin/parcel build --public-url 'https://townewgokgok.github.io/examples-javascript-generator/' index.html"
   },
   "author": "townewgokgok <townewgokgok@gmail.com>",
