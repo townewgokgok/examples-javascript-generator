@@ -185,6 +185,26 @@
       #concurrent .gist-it-gist {
         left: 320px;
       }
+      #coffeebreak-container {
+        width: 512px;
+        height: 144px;
+      }
+      #coffeebreak-content {
+        width: 256px;
+        height: 72px;
+        position: relative;
+        background-color: #000858;
+        overflow: hidden;
+        transform-origin: 0 0;
+        transform: scale(2);
+        -ms-interpolation-mode: nearest-neighbor;
+        image-rendering: -webkit-crisp-edges;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: pixelated;
+      }
+      #coffeebreak-content * {
+        position: absolute;
+      }
       #recursion .gist-it-gist {
         left: 320px;
       }
@@ -204,6 +224,12 @@
     <div class="example" id="concurrent">
       <canvas id="concurrent-canvas"></canvas>
       <script src="https://gist-it.appspot.com/github/townewgokgok/examples-javascript-generator/raw/master/src/concurrent.ts"></script>
+    </div>
+    <div class="example" id="coffeebreak">
+      <div id="coffeebreak-container">
+        <div id="coffeebreak-content"></div>
+      </div>
+      <script src="https://gist-it.appspot.com/github/townewgokgok/examples-javascript-generator/raw/master/src/coffeebreak.ts?slice=22:80"></script>
     </div>
     <div class="example" id="recursion">
       <canvas id="recursion-canvas"></canvas>
