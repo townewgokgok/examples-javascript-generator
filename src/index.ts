@@ -12,8 +12,8 @@ interface Demo {
 }
 
 const examples: {[name: string]: Demo} = {
-  // coffeebreak1,
-  // coffeebreak2,
+  coffeebreak1,
+  coffeebreak2,
   inn,
   guide,
   basic,
