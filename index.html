@@ -63,6 +63,9 @@
       .example.visible {
         display: block;
       }
+      #buttons {
+        display: none;
+      }
       #buttons button {
         margin-right: 1em;
         padding: .5em 1em;
@@ -212,9 +215,30 @@
         background-color: #f8f8f8 !important;
         font-size: 80% !important;
       }
+      #loading {
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 9999;
+      }
+      #preloader {
+        position: fixed;
+        left: -1px;
+        top: -1px;
+        opacity: .005;
+        overflow: hidden;
+      }
+      #preloader * {
+        position: fixed;
+        width: 1px;
+        height: 1px;
+      }
     </style>
   </head>
   <body>
+    <div id="loading">
+      Loading...
+    </div>
     <div id="buttons"></div>
     <br/>
     <div class="example" id="example-basic">
@@ -284,6 +308,7 @@
       <div id="guide-blocker"></div>
       <script src="https://gist-it.appspot.com/github/townewgokgok/examples-javascript-generator/raw/master/src/guide.ts?slice=279:"></script>
     </div>
+    <div id="preloader"></div>
     <script src="./src/index.ts"></script>
   </body>
 </html>

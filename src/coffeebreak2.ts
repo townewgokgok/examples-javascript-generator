@@ -99,7 +99,7 @@ export default function* dotEater (): IterableIterator<{}> {
   let turn = false
 
   function* robo (textures: string[], delay: number = 0): IterableIterator<{}> {
-    yield wait(delay)
+    yield* wait(delay)
     const enemy = new Sprite(textures[1])
     stage.appendChild(enemy.el)
     enemy.x = x0
@@ -115,7 +115,7 @@ export default function* dotEater (): IterableIterator<{}> {
         yield
         f++
       }
-      yield wait(16)
+      yield* wait(16)
     }
     while (!turn) {
       yield
@@ -235,7 +235,7 @@ export default function* dotEater (): IterableIterator<{}> {
     if (r1.done && r2.done) break
   }
 
-  yield wait(15)
+  yield* wait(15)
 
   const sweat = new Sprite(bg_misc_sweat)
   stage.appendChild(sweat.el)
