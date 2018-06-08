@@ -12,7 +12,7 @@ import sprites_boss_gj_1 from './assets/sprites-boss_gj-1.png'
 import bonus_bou_1 from './assets/bonus-bou-1.png'
 import bonus_nasu_0 from './assets/bonus-nasu-0.png'
 
-let stage: HTMLDivElement
+const stage: HTMLDivElement = document.getElementById('coffeebreak1-content') as HTMLDivElement
 
 function* wait (frames: number): IterableIterator<{}> {
   while (0 < frames--) {
@@ -82,7 +82,6 @@ function* awardBonus (): IterableIterator<{}> {
 let request: number = null
 
 export function start () {
-  stage = document.getElementById('coffeebreak-content') as HTMLDivElement
   const iter = awardBonus()
   function update () {
     iter.next()

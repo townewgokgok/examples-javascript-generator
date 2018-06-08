@@ -75,7 +75,7 @@ function updateHover (p: Vector, isFocused: boolean) {
     p.y - window.pageYOffset
   )
   revert()
-  while (e && e.id !== 'guide') {
+  while (e && e.id !== 'example-guide') {
     if (isFocused) {
       e.classList.add('hover')
     } else {
@@ -125,7 +125,7 @@ function setSliderPos (id: string, x: number) {
 
 let lastCursorPos: Vector = null
 function setCursorPos (pos: Vector) {
-  const p0 = getElementPos('guide', 0, 0)
+  const p0 = getElementPos('example-guide', 0, 0)
   const p = pos.sub(p0)
   const e = document.getElementById('guide-cursor') as HTMLElement
   e.style.left = `${p.x}px`
@@ -246,12 +246,12 @@ function *inputText (id: string, text: string, fn?: (e: HTMLInputElement, text: 
 
 function addClickEffect () {
   iters.push(function* (): IterableIterator<{}> {
-    const p0 = getElementPos('guide', 0, 0)
+    const p0 = getElementPos('example-guide', 0, 0)
     const p = lastCursorPos.sub(p0)
 
     const e = document.createElement('div')
     e.classList.add('guide-click-effect')
-    document.getElementById('guide').appendChild(e)
+    document.getElementById('example-guide').appendChild(e)
     e.style.left = `${p.x}px`
     e.style.top = `${p.y}px`
 
@@ -280,7 +280,7 @@ function* waitDialogHidden (): IterableIterator<{}> {
 function* guide (): IterableIterator<{}> {
   reset()
   enableBlocker()
-  setCursorPos(getElementPos('guide'))
+  setCursorPos(getElementPos('example-guide'))
   showCursor()
   yield* wait(waitFrames)
 
